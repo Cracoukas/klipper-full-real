@@ -1,0 +1,158 @@
+###############################################
+#          KLIPPER FULL-REAL GITIGNORE
+#         Optimisé pour sauvegarde propre
+###############################################
+
+# ======================
+# KLIPPER (source code)
+# ======================
+
+# Python bytecode / caches
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pkl
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# Git leftovers
+*.orig
+*.rej
+
+# Logs
+logs/
+*.log
+*.error
+*.old
+*.bak
+
+
+# ======================
+# MOONRAKER
+# ======================
+
+# Moonraker state files (runtime)
+state.json
+database/
+*.db
+*.db-shm
+*.db-wal
+
+# Temporary JSON
+*.json.tmp
+notifications.json
+history.json
+messages.json
+
+# Certificates (ne jamais commit)
+*.pem
+*.crt
+*.key
+
+
+# ======================
+# MAINSAIL UI
+# ======================
+
+# Cache frontend
+cache/
+*.tmp
+*.temp
+
+# Service worker cache
+workbox-*.js
+*.map
+
+# Logs
+*.log
+
+# Fonts & assets minifiés (facultatif)
+# /!\ Optionnel : si tu veux alléger le dépôt encore plus
+# Tu peux garder assets si tu veux une copie complète du front
+#assets/
+#fonts/
+#img/
+
+
+# ======================
+# PRINTER_DATA
+# ======================
+
+# Auto backups de Mainsail
+printer-*.cfg
+
+# Temp & cache files
+*.tmp
+*.temp
+*.pid
+
+# SQLite databases
+*.db
+*.db-shm
+*.db-wal
+
+# Moonraker runtime
+moonraker.asvc
+
+# Logs
+logs/
+*.log
+
+# Virtual SD
+gcodes/.metadata.json
+gcodes/uploads/
+gcodes/.trash/
+
+
+# ======================
+# SYSTEME
+# ======================
+
+# Archives / backup tar
+*.tar
+*.tar.gz
+*.zip
+*.7z
+
+# Swap & crashdumps
+*.swap
+*.core
+*.crash
+
+# OS / Package managers
+.cache/
+.local/
+.config/
+
+
+
+###############################################
+#            EXCEPTIONS IMPORTANTES
+###############################################
+
+# Autoriser les fichiers sources utiles
+!*.cfg
+!*.py
+!*.json
+!*.yaml
+!*.yml
+
+# Autoriser scripts shell
+!*.sh
+
+# Autoriser fichiers HTML / JS / CSS (si Mainsail est inclus)
+!*.html
+!*.js
+!*.css
+
+# Autoriser les fichiers de configuration Moonraker
+!moonraker.conf
+!machine.conf
+
+###############################################
+#           FIN DU GITIGNORE PRO
+###############################################
